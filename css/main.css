@@ -10,28 +10,127 @@ html {
 
 body {
   background-color: white;
-  width: 100%;
   font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 0px 102.4px;
+  padding: 0px 15px;
+}
+
+nav.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.navigation__bar {
+  height: 90.4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.navigation__bar a {
+  text-decoration: none;
+  padding: 40px 15px;
+  height: 90.4px;
+  font-weight: bold;
+  color: black;
+  font-size: 13px;
+}
+nav.navigation__link {
+  text-align: center;
+  font-size: 11px;
+}
+
+.logo {
+  padding: 0px 15px 0px 0px;
+  width: 88px;
+  height: 26px;
 }
 
 .header__top {
   background-color: #fef7f6;
   height: 48.6px;
-}
-
-.container {
-  width: 100%;
-  height: 48px;
+  font-size: 11px;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 11px;
-  padding: 0px 15px;
 }
 
-span {
-  padding: 0px 15px 0px 0px;
-  font-weight: 300;
+.align-left {
+  justify-content: flex-start;
+}
+
+.centered {
+  justify-content: center;
+}
+
+.align-right {
+  justify-content: flex-end;
+}
+
+.banner {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  background-image: url("https://demo.themeies.com/silon/images/bg-1.jpg");
+}
+.banner__fluid {
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.banner__fluid__column1 {
+  width: 50em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner__fluid__column2 {
+  width: 50em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner__fluid__column2 div {
+  width: 100em;
+}
+.banner__image {
+  display: flex;
+  width: 50%;
+}
+.banner__image img {
+  position: relative;
+  width: 40em;
+}
+.banner__content p.tagline {
+  height: 11.2px;
+  text-transform: uppercase;
+  color: #565656;
+}
+.banner__content--button {
+  background: #ff5353;
+  width: 170px;
+  height: 51.2px;
+  border-radius: 1em;
+}
+.banner__content--button a {
+  display: inline-block;
+  text-transform: uppercase;
+  color: white;
+  padding: 20px 25px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
 }
 /*# sourceMappingURL=main.css.map */

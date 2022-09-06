@@ -18,38 +18,48 @@ html {
 
 body {
   background-color: #ffff;
-  width: 100%;
   font-family: 'Roboto', sans-serif;
 }
+
 .container {
-display: inline-block;
   margin: 0px 102.4px;
-  width: 960px;
   padding: 0px 15px;
 }
-nav.navigation__bar {
-  height: 90.4px;
-  a {
-    text-decoration: none;
-    padding: 40px 15px;
+
+nav.navigation {
+  &__bar {
     height: 90.4px;
-    font-weight: bold;
-    color: black;
-    font-size: 13px;
+    @include flex(flex, row, space-between, center);
+
+    a {
+      text-decoration: none;
+      padding: 40px 15px;
+      height: 90.4px;
+      font-weight: bold;
+      color: black;
+      font-size: 13px;
+    }
   }
+
+  &__link {
+    text-align: center;
+    font-size: 11px;
+  }
+
   @include flex(flex, row, space-between, center);
 }
+.logo {
+  padding: 0px 15px 0px 0px;
+  width: 88px;
+  height: 26px;
+}
+
 .header__top {
   background-color: #fef7f6;
   height: 48.6px;
   font-size: 11px;
+  width: 100vw;
   @include flex(flex, row, space-between, center);
-div {
-  @include flex(flex, row, space-between, center);
-  span {
-    padding: 0px 15px 0px 0px;
-  }
-}
 }
 
 .align-left {
@@ -63,3 +73,71 @@ div {
 .align-right {
   justify-content: flex-end;
 }
+
+.banner {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  background-image: url("https://demo.themeies.com/silon/images/bg-1.jpg");
+
+  &__fluid {
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    &__column1 {
+      width: 50em;
+      @include flex(flex, row, space-between, center);
+    }
+
+    &__column2 {
+      width: 50em;
+      @include flex(flex, row, space-between, center);
+
+      div {
+        width: 100em;
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    width: 50%;
+
+    img {
+      position: relative;
+      width: 40em;
+    }
+  }
+
+  &__content {
+    p.tagline {
+      height: 11.2px;
+      text-transform: uppercase;
+      color: #565656;
+    }
+
+    &--button {
+      background: #ff5353;
+      width: 170px;
+      height: 51.2px;
+      border-radius: 1em;
+
+      a {
+        display: inline-block;
+        text-transform: uppercase;
+        color: #ffff;
+        padding: 20px 25px;
+        text-align: center;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+
