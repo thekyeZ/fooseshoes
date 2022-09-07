@@ -24,7 +24,41 @@ body {
 .container {
   margin: 0px 102.4px;
   padding: 0px 15px;
+
+  &__align {
+    @include flex(flex, row, space-between, center);
+    height: 48.6px;
+
+    &--left {
+      padding: 0px 15px;
+      @include flex(flex, row, space-between, center);
+      justify-content: flex-start;
+    }
+
+    &--right {
+      @include flex(flex, row, space-between, center);
+      justify-content: flex-end;
+      padding: 0px 15px;
+
+    }
+
+    div {
+      text-align: center;
+    }
+
+    span {
+      display: inline-block;
+      padding: 0px 15px 0px 0px;
+      height: 28.6px;
+      text-align: center;
+      font-size: 11px;
+
+    }
+  }
+
+
 }
+
 
 nav.navigation {
   &__bar {
@@ -48,6 +82,7 @@ nav.navigation {
 
   @include flex(flex, row, space-between, center);
 }
+
 .logo {
   padding: 0px 15px 0px 0px;
   width: 88px;
@@ -59,8 +94,9 @@ nav.navigation {
   height: 48.6px;
   font-size: 11px;
   width: 100vw;
-  @include flex(flex, row, space-between, center);
+  //@include flex(flex, row, space-between, center);
 }
+
 
 .align-left {
   justify-content: flex-start;

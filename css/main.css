@@ -17,6 +17,39 @@ body {
   margin: 0px 102.4px;
   padding: 0px 15px;
 }
+.container__align {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 48.6px;
+}
+.container__align--left {
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container__align--right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 15px;
+}
+.container__align div {
+  text-align: center;
+}
+.container__align span {
+  display: inline-block;
+  padding: 0px 15px 0px 0px;
+  height: 28.6px;
+  text-align: center;
+  font-size: 11px;
+}
 
 nav.navigation {
   display: flex;
@@ -55,10 +88,6 @@ nav.navigation__link {
   height: 48.6px;
   font-size: 11px;
   width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .align-left {
