@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 @import "normalize.css";
 html {
   box-sizing: border-box;
@@ -115,43 +115,62 @@ nav.navigation__link {
   display: grid;
   grid-template-columns: 50% 50%;
 }
-.banner__fluid__column1 {
+.banner__column1 {
+  width: 50em;
+  display: block;
+  position: relative;
+}
+.banner__column1--content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner .content {
+  position: relative;
+  text-align: center;
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner .content__button {
+  background: #ff5353;
+  width: 170px;
+  height: 51.2px;
+  border-radius: 1em;
+}
+.banner__column2 {
   width: 50em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.banner__fluid__column2 {
-  width: 50em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.banner__fluid__column2 div {
+.banner__column2 div {
   width: 100em;
 }
 .banner__image {
   display: flex;
   width: 50%;
 }
-.banner__image img {
+.banner img {
   position: relative;
   width: 40em;
 }
-.banner__content p.tagline {
+
+p.tagline {
   height: 11.2px;
   text-transform: uppercase;
   color: #565656;
 }
-.banner__content--button {
-  background: #ff5353;
-  width: 170px;
-  height: 51.2px;
-  border-radius: 1em;
-}
-.banner__content--button a {
+
+a {
   display: inline-block;
   text-transform: uppercase;
   color: white;
@@ -161,5 +180,12 @@ nav.navigation__link {
   margin-left: auto;
   margin-right: auto;
   font-size: 14px;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 56px;
+  margin-bottom: 35px;
 }
 /*# sourceMappingURL=main.css.map */
