@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @import "normalize.css";
 
+
 @mixin flex($parameter1,$parameter2,$parameter3,$parameter4) {
   display: $parameter1;
   flex-direction: $parameter2;
@@ -107,7 +108,6 @@ nav.navigation {
 }
 
 .banner {
-  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -115,23 +115,25 @@ nav.navigation {
 
 
   &__fluid {
+    position: relative;
     margin-right: auto;
     margin-left: auto;
     display: grid;
     grid-template-columns: 50% 50%;
   }
+
   &__column1 {
     width: 50em;
     display: block;
-   position: relative;
+    position: relative;
     //@include flex(flex, column, space-between, center);
-&--content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  @include flex(flex, row, space-between, center);
-}
+    &--content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include flex(flex, row, space-between, center);
+    }
   }
 
   .content {
@@ -139,11 +141,26 @@ nav.navigation {
     text-align: center;
     padding: 15px 15px;
     @include flex(flex, column, space-between, center);
+   // flex-wrap: wrap;
+
     &__button {
       background: #ff5353;
       width: 170px;
       height: 51.2px;
       border-radius: 1em;
+
+      &--content {
+        display: inline-block;
+        text-transform: uppercase;
+        color: #ffff;
+        padding: 20px 25px;
+        text-align: center;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+        font-weight: 500;
+      }
     }
   }
 
@@ -167,33 +184,78 @@ nav.navigation {
   }
 }
 
-  p.tagline {
-    height: 11.2px;
-    text-transform: uppercase;
-    color: #565656;
-  }
+p.tagline {
+  height: 11.2px;
+  text-transform: uppercase;
+  color: #565656;
+}
 
-  a {
-    display: inline-block;
-    text-transform: uppercase;
-    color: #ffff;
-    padding: 20px 25px;
-    text-align: center;
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 14px;
-    font-weight: 500;
-  }
+a {
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
 h1 {
   font-size: 40px;
   line-height: 56px;
   margin-bottom: 35px;
 }
-h3 {
-  padding: 0px 15px;
+
+.featuredProduct {
+  &__container {
+    padding: 0px 50px;
+    @include flex(flex, column, space-between, center);
+    display: block;
+
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    height: 123.188px;
+  }
+}
+
+h2 {
   font-size: 36px;
   text-align: center;
   text-transform: uppercase;
+  padding: 0px 50px;
 }
 
+.ti-star {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  color: #ff5353;
+  font-size: 14px;
+}
+
+p.price {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: black;
+}
+.columns {
+  @include flex(flex, row, space-around, center);
+  position: relative;
+
+}
+.product {
+
+  margin: 0px 15px;
+  &__item {
+    @include flex(flex, column, space-around, center);
+
+  &--details {
+    @include flex(flex, column, space-around, center);
+    p.item__name {
+      font-size: 14px;
+      color: #565656;
+    }
+  }}
+}
