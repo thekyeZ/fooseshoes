@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@100;300;400;700&display=swap");
 @import "normalize.css";
 html {
   box-sizing: border-box;
@@ -15,7 +15,6 @@ body {
 
 .container {
   margin: 0px 102.4px;
-  padding: 0px 15px;
 }
 .container__align {
   display: flex;
@@ -108,6 +107,9 @@ nav.navigation__link {
   width: 100vw;
   background-image: url("https://demo.themeies.com/silon/images/bg-1.jpg");
 }
+.banner__colored {
+  background-color: #e9e2d4;
+}
 .banner__fluid {
   position: relative;
   margin-right: auto;
@@ -161,14 +163,18 @@ nav.navigation__link {
   width: 50em;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .banner__column2 div {
   width: 100em;
 }
 .banner__image {
+  position: relative;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   width: 50%;
 }
 .banner img {
@@ -237,6 +243,7 @@ p.price {
   justify-content: space-around;
   align-items: center;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .product {
@@ -257,5 +264,34 @@ p.price {
 .product__item--details p.item__name {
   font-size: 14px;
   color: #565656;
+}
+
+.secondBannerTitle {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  margin-bottom: 33px;
+  font-size: 58px;
+}
+
+.secondBannerTitleMin {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 54px;
+  text-align: center;
+}
+
+footer {
+  background-color: #e9e2d4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lists {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
