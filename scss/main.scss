@@ -28,6 +28,10 @@ body {
   &__align {
     @include flex(flex, row, space-between, center);
     height: 48.6px;
+    &--footer {
+      justify-content: center;
+    }
+  }
 
     &--left {
       padding: 0px 15px;
@@ -55,7 +59,7 @@ body {
 
     }
   }
-}
+
 
 nav.navigation {
   &__bar {
@@ -107,9 +111,10 @@ nav.navigation {
 }
 
 .banner {
-  &__colored{
+  &__colored {
     background-color: #e9e2d4;
   }
+
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -143,7 +148,7 @@ nav.navigation {
     text-align: center;
     padding: 15px 15px;
     @include flex(flex, column, space-between, center);
-   // flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     &__button {
       background: #ff5353;
@@ -174,6 +179,7 @@ nav.navigation {
       width: 100em;
     }
   }
+
   &__image {
     position: relative;
     @include flex(flex, row, space-around, center);
@@ -182,7 +188,7 @@ nav.navigation {
 
   img {
     position: relative;
-    width: 40em;
+    width: 100%;
   }
 }
 
@@ -197,7 +203,6 @@ a {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 h1 {
@@ -242,41 +247,80 @@ p.price {
   text-align: center;
   color: black;
 }
+
 .columns {
   @include flex(flex, row, space-around, center);
   position: relative;
   margin-bottom: 50px;
 
 }
+
 .product {
   margin: 0px 15px;
+
   &__item {
     @include flex(flex, column, space-around, center);
 
-  &--details {
-    @include flex(flex, column, space-around, center);
-    p.item__name {
-      font-size: 14px;
-      color: #565656;
+    &--details {
+      @include flex(flex, column, space-around, center);
+
+      p.item__name {
+        font-size: 14px;
+        color: #565656;
+      }
     }
-  }}
+  }
 }
+
 .secondBannerTitle {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
   margin-bottom: 33px;
   font-size: 58px;
 }
+
 .secondBannerTitleMin {
   font-weight: 300;
   text-transform: uppercase;
   margin-bottom: 54px;
   text-align: center;
 }
-footer {
+
+footer.footer {
   background-color: #e9e2d4;
+  width: auto;
+  height: 400px;
+  position: relative;
+  justify-content: center;
   @include flex(flex, column, space-around, center);
 }
 .lists {
+  position: relative;
   @include flex(flex,row, space-around, center);
+  //justify-content: center;
+
+}
+ul.list {
+  list-style-type: none;
+  text-align: left;
+  position: relative;
+  @include flex(flex,column, space-around, center);
+  //justify-content: center;
+
+}
+.list h4 {
+  text-transform: uppercase;
+  position: relative;
+}
+.list li {
+text-align: left;
+  position: relative;
+
+}
+li a {
+  font-size: 14px;
+  text-decoration: none;
+  text-align: left;
+  color: #8888;
+  margin-bottom: 5px;
 }
