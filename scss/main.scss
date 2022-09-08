@@ -304,7 +304,8 @@ ul.list {
   list-style-type: none;
   text-align: left;
   position: relative;
-  @include flex(flex,column, space-around, center);
+  @include flex(flex,column, space-around, flex-start);
+  margin: 0px 0px 0px 95px;
   //justify-content: center;
 
 }

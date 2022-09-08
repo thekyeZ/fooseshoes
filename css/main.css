@@ -311,7 +311,8 @@ ul.list {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  margin: 0px 0px 0px 95px;
 }
 
 .list h4 {
