@@ -103,6 +103,9 @@ nav.navigation__link {
 .align-right {
   justify-content: flex-end;
 }
+.align-right :hover {
+  color: #ff5353;
+}
 
 .banner {
   background-repeat: no-repeat;
@@ -112,6 +115,11 @@ nav.navigation__link {
 }
 .banner__colored {
   background-color: #e9e2d4;
+  display: flex;
+}
+.banner__colored img {
+  width: 45em;
+  justify-content: flex-end;
 }
 .banner__fluid {
   position: relative;
@@ -122,7 +130,6 @@ nav.navigation__link {
 }
 .banner__column1 {
   width: 50em;
-  display: block;
   position: relative;
 }
 .banner__column1--content {
@@ -173,17 +180,8 @@ nav.navigation__link {
 .banner__column2 div {
   width: 100em;
 }
-.banner__image {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 50%;
-}
 .banner img {
-  position: relative;
-  width: 100%;
+  max-width: 100%;
 }
 
 p.tagline {
@@ -223,6 +221,30 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   padding: 0px 50px;
+}
+
+.ti-shopping-cart {
+  position: relative;
+}
+
+.ti-heart {
+  position: relative;
+}
+
+.cloud {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #ff5353;
+  top: 34%;
+  right: 21%;
+  color: #fef7f6;
+  font-size: 9px;
+}
+
+div.cloud p {
+  transform: translate(5%, -80%);
 }
 
 .ti-star {
@@ -300,19 +322,25 @@ footer.footer {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 ul.list {
   list-style-type: none;
-  text-align: left;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
   margin: 0px 0px 0px 95px;
+}
+ul.list__wider {
+  width: 400px;
+  display: inline-block;
+}
+
+ul a :hover {
+  background-color: #ff5353;
+}
+
+ul div {
+  display: inline-block;
 }
 
 .list h4 {
@@ -324,6 +352,9 @@ ul.list {
   text-align: left;
   position: relative;
 }
+.list li :hover {
+  color: #ff5353;
+}
 
 li a {
   font-size: 14px;
@@ -331,5 +362,137 @@ li a {
   text-align: left;
   color: rgba(136, 136, 136, 0.5333333333);
   margin-bottom: 5px;
+}
+
+.button__googl {
+  margin: 10px;
+  width: 120px;
+  height: 47px;
+}
+
+.button__googl--content {
+  color: black;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+._buttonTexts {
+  position: relative;
+  display: inline-block;
+}
+
+.smallText {
+  text-align: left;
+  height: 8px;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  margin: 5px 0px;
+}
+
+.biggerText {
+  text-align: left;
+  width: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.ti-android {
+  color: #ff5353;
+  font-size: 25px;
+  text-align: center;
+}
+
+.button__googl--content:hover {
+  transition: 1ms;
+  background-color: #ff5353;
+}
+.button__googl--content:hover ._buttonTexts {
+  color: white;
+}
+.button__googl--content:hover .ti-android {
+  color: #fff;
+}
+
+.button__appl {
+  margin: 10px;
+  width: 120px;
+  height: 47px;
+}
+
+.button__appl--content {
+  color: white;
+  background-color: #ff5353;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.socialmedia {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  margin: 0px 10px 0px 0px;
+  position: relative;
+  color: black;
+}
+
+.ti-facebook {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.socialmedia:hover {
+  background-color: #ff5353;
+  color: white;
+}
+
+.ti-twitter-alt {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.ti-pinterest-alt {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.ti-instagram {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+p.copyright {
+  color: #565656;
+  font-size: 15px;
+}
+
+a.red_link {
+  color: #ff5353;
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
