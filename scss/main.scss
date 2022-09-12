@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap');
 @import "normalize.css";
 
 
@@ -50,14 +50,18 @@ body {
   div {
     text-align: center;
   }
-
-  span {
+.info {   display: inline-block;
+  height: 28.6px;
+  text-align: center;
+  font-size: 11px;
+  padding: 0px 15px 0px 0px;
+}
+  .rating {
     display: inline-block;
-    padding: 0px 15px 0px 0px;
+    //padding: 0px 15px 0px 0px;
     height: 28.6px;
     text-align: center;
     font-size: 11px;
-
   }
 }
 
@@ -127,7 +131,9 @@ nav.navigation {
     margin-right: auto;
     margin-left: auto;
     display: flex;
-  }
+  &--2 {
+    background-color:#e9e2d8;
+  }}
 
   &__column1 {
     width: 50%;
@@ -136,12 +142,12 @@ nav.navigation {
     align-items: center;
     justify-content: center;
     &--content {
-      width: 40%;
+      width: 100%;
       position: absolute;
-      left: 50%;
+      left: 60%;
       top: 50%;
     transform: translate(-50%, -50%);
-      @include flex(flex, column, space-around, center);
+     @include flex(flex, column, space-around, center);
     }
   }
   &__column2 {
@@ -151,7 +157,10 @@ nav.navigation {
     width: 50%;
   }
 }
-
+.content__button:hover.content__button--content{
+  color: blue;
+  background-color: white;
+}
   .content {
     position: relative;
     text-align: center;
@@ -159,11 +168,12 @@ nav.navigation {
     @include flex(flex, column, space-between, center);
     flex-wrap: nowrap;
 
+
     &__button {
       background: #ff5353;
       width: 170px;
       height: 51.2px;
-      border-radius: 1em;
+      border-radius: 8px;
 
       &--content {
         display: inline-block;
@@ -180,13 +190,14 @@ nav.navigation {
     }
   }
 .banner__colored--image {
-  height: 80%;
+  height: 100%;
 }
 
 p.tagline {
   height: 11.2px;
   text-transform: uppercase;
   color: #565656;
+  margin: 0;
 }
 
 a {
@@ -246,17 +257,19 @@ h2 {
 div.cloud p {
   transform: translate(5%, -80%)
 }
-
 .ti-star {
   position: relative;
-  display: inline-block;
   text-align: center;
   color: #ff5353;
   font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
 
 p.price {
   position: relative;
+  margin: 10px 0 0 0;
+  padding: 0;
   font-size: 18px;
   font-weight: 500;
   text-align: center;
@@ -277,22 +290,26 @@ p.price {
 
 }
 .product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   &__item {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     &--hover {
-position: absolute;
+      position: relative;
       visibility: hidden;
       display: flex;
       text-decoration: none;
-      top: 60%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);
-      transition: 1.6s ease-in-out;
+      justify-content: center;
     }
-    &--details {
-
-
+    &--details {:hover.item__name {
+      color: #ff5353;
+    }
       p.item__name {
+        margin: 10px 0 0 0;
         font-size: 14px;
         color: #565656;
       }
@@ -308,41 +325,27 @@ position: absolute;
   text-decoration: none;
   margin: 5px;
   color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .entrance:hover {
   background-color:#ff5353;
   color:white;
 }
-span.ti-eye {
+.ti-eye {
+
   font-size: 15px;
   text-decoration: none;
-  position: absolute;
- align-content: center;
-  top: 60%;
-  left: 65%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
 }
 span.ti-heart {
   font-size: 15px;
   text-decoration: none;
-  position: absolute;
-  align-content: center;
-  top: 60%;
-  left: 65%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
 }
 span.ti-shopping-cart {
   font-size: 15px;
   text-decoration: none;
-  position: absolute;
-  align-content: center;
-  top: 60%;
-  left: 65%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-
 }
 .secondBannerTitle {
   font-family: "Dancing Script", cursive;
@@ -359,7 +362,7 @@ span.ti-shopping-cart {
 }
 
 footer.footer {
-  background-color: #e9e2d4;
+  background-color: #e9e2d8;
   width: auto;
   height: 400px;
   position: relative;
@@ -407,7 +410,6 @@ ul div {
 }
 
 li a {
-
   font-size: 14px;
   text-decoration: none;
   text-align: left;
@@ -415,21 +417,15 @@ li a {
   margin-bottom: 5px;
 
 }
-.button__googl {
-  margin:10px;
-  width: 120px;
-  height: 47px;
-}
 
 .button__googl--content {
+  padding: 8px 8px 10px 8px;
   color: black;
   background-color: white;
   border-radius: 8px;
   text-align: center;
   display: inline-block;
-  position: absolute;
   text-transform: uppercase;
-  padding: 10px;
 }
 
 ._buttonTexts {
@@ -448,17 +444,22 @@ li a {
 .biggerText {
   text-align: left;
   width: inherit;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 13px;
+ font-weight: 500;
   margin: 0;
 }
 
 .ti-android {
   color: #ff5353;
-  font-size: 25px;
+  font-size: 20px;
+  text-align: center;
+}
+.ti-apple {
+  font-size: 20px;
   text-align: center;
 }
 .button {
+  position: relative;
   &__googl--content:hover {
     transition: 1ms;
     background-color: #ff5353;
@@ -473,20 +474,16 @@ li a {
   }
 }
 .button__appl {
-  margin:10px;
-  width: 120px;
   height: 47px;
 }
-
 .button__appl--content {
+  padding: 8px 8px 10px 8px;
   color: white;
   background-color: #ff5353;
   border-radius: 8px;
   text-align: center;
   display: inline-block;
-  position: absolute;
   text-transform: uppercase;
-  padding: 10px;
 }
 .socialmedia {
   height: 30px;
