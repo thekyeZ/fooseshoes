@@ -95,7 +95,7 @@ nav.navigation {
   background-color: #fef7f6;
   height: 48.6px;
   font-size: 11px;
-  width: 100vw;
+  width: 100%;
 }
 
 
@@ -116,19 +116,10 @@ nav.navigation {
 }
 
 .banner {
-  &__colored {
-    background-color: #e9e2d4;
-    display: flex;
-
-    img {
-      width: 45em;
-      justify-content: flex-end;
-    }
-  }
 
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   background-image: url("https://demo.themeies.com/silon/images/bg-1.jpg");
 
 
@@ -136,22 +127,31 @@ nav.navigation {
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
   }
 
   &__column1 {
-    width: 50em;
+    width: 50%;
     position: relative;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &--content {
+      width: 40%;
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%);
-      @include flex(flex, row, space-between, center);
+    transform: translate(-50%, -50%);
+      @include flex(flex, column, space-around, center);
     }
   }
+  &__column2 {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+  }
+}
 
   .content {
     position: relative;
@@ -180,24 +180,8 @@ nav.navigation {
       }
     }
   }
-
-  &__column2 {
-    width: 50em;
-    @include flex(flex, row, space-around, center);
-
-    div {
-      width: 100em;
-    }
-  }
-
-  &__image {
-    //@include flex(flex, row, space-around, center);
-    //width: 50%;
-  }
-
-  img {
-    max-width: 100%;
-  }
+.banner__colored--image {
+  width: 100%;
 }
 
 p.tagline {
@@ -214,9 +198,8 @@ a {
 }
 
 h1 {
-  font-size: 40px;
-  line-height: 56px;
-  margin-bottom: 35px;
+  font-size: 50px;
+  text-align: center;
 }
 
 .featuredProduct {

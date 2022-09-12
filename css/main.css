@@ -89,7 +89,7 @@ nav.navigation__link {
   background-color: #fef7f6;
   height: 48.6px;
   font-size: 11px;
-  width: 100vw;
+  width: 100%;
 }
 
 .align-left {
@@ -110,39 +110,41 @@ nav.navigation__link {
 .banner {
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   background-image: url("https://demo.themeies.com/silon/images/bg-1.jpg");
-}
-.banner__colored {
-  background-color: #e9e2d4;
-  display: flex;
-}
-.banner__colored img {
-  width: 45em;
-  justify-content: flex-end;
 }
 .banner__fluid {
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
 }
 .banner__column1 {
-  width: 50em;
+  width: 50%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .banner__column1--content {
+  width: 40%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
-.banner .content {
+.banner__column2 {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.content {
   position: relative;
   text-align: center;
   padding: 15px 15px;
@@ -152,13 +154,13 @@ nav.navigation__link {
   align-items: center;
   flex-wrap: nowrap;
 }
-.banner .content__button {
+.content__button {
   background: #ff5353;
   width: 170px;
   height: 51.2px;
   border-radius: 1em;
 }
-.banner .content__button--content {
+.content__button--content {
   display: inline-block;
   text-transform: uppercase;
   color: white;
@@ -170,18 +172,9 @@ nav.navigation__link {
   font-size: 14px;
   font-weight: 500;
 }
-.banner__column2 {
-  width: 50em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-.banner__column2 div {
-  width: 100em;
-}
-.banner img {
-  max-width: 100%;
+
+.banner__colored--image {
+  width: 100%;
 }
 
 p.tagline {
@@ -198,9 +191,8 @@ a {
 }
 
 h1 {
-  font-size: 40px;
-  line-height: 56px;
-  margin-bottom: 35px;
+  font-size: 50px;
+  text-align: center;
 }
 
 .featuredProduct__container {
