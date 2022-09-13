@@ -50,12 +50,15 @@ body {
   div {
     text-align: center;
   }
-.info {   display: inline-block;
-  height: 28.6px;
-  text-align: center;
-  font-size: 11px;
-  padding: 0px 15px 0px 0px;
-}
+
+  .info {
+    display: inline-block;
+    height: 28.6px;
+    text-align: center;
+    font-size: 11px;
+    padding: 0px 15px 0px 0px;
+  }
+
   .rating {
     display: inline-block;
     //padding: 0px 15px 0px 0px;
@@ -65,7 +68,7 @@ body {
   }
 }
 
-nav.navigation {
+.navigation {
   &__bar {
     height: 90.4px;
     @include flex(flex, row, space-between, center);
@@ -73,8 +76,8 @@ nav.navigation {
     a {
       text-decoration: none;
       padding: 40px 15px;
-      height: 90.4px;
-      font-weight: bold;
+      height: 45px;
+      font-weight: 500;
       color: black;
       font-size: 13px;
     }
@@ -83,6 +86,8 @@ nav.navigation {
   &__link {
     text-align: center;
     font-size: 11px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
   }
 
   @include flex(flex, row, space-between, center);
@@ -108,6 +113,59 @@ nav.navigation {
 
 .centered {
   justify-content: center;
+
+  :hover {
+    color: #ff5353;
+  }
+}
+.ti-angle-down {
+  position: relative;
+  top: 1px;
+}
+.dropbtn {
+  background-color: #ffffff;
+  color: black;
+  padding: 18px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ffffff;
 }
 
 .align-right {
@@ -131,9 +189,11 @@ nav.navigation {
     margin-right: auto;
     margin-left: auto;
     display: flex;
-  &--2 {
-    background-color:#e9e2d8;
-  }}
+
+    &--2 {
+      background-color: #e9e2d8;
+    }
+  }
 
   &__column1 {
     width: 50%;
@@ -141,15 +201,17 @@ nav.navigation {
     display: flex;
     align-items: center;
     justify-content: center;
+
     &--content {
       width: 100%;
       position: absolute;
       left: 60%;
       top: 50%;
-    transform: translate(-50%, -50%);
-     @include flex(flex, column, space-around, center);
+      transform: translate(-50%, -50%);
+      @include flex(flex, column, space-around, center);
     }
   }
+
   &__column2 {
     position: relative;
     display: flex;
@@ -157,38 +219,41 @@ nav.navigation {
     width: 50%;
   }
 }
-.content__button:hover.content__button--content{
+
+.content__button:hover.content__button--content {
   color: blue;
   background-color: white;
 }
-  .content {
-    position: relative;
-    text-align: center;
-    padding: 15px 15px;
-    @include flex(flex, column, space-between, center);
-    flex-wrap: nowrap;
+
+.content {
+  position: relative;
+  text-align: center;
+  padding: 15px 15px;
+  @include flex(flex, column, space-between, center);
+  flex-wrap: nowrap;
 
 
-    &__button {
-      background: #ff5353;
-      width: 170px;
-      height: 51.2px;
-      border-radius: 8px;
+  &__button {
+    background: #ff5353;
+    width: 170px;
+    height: 51.2px;
+    border-radius: 8px;
 
-      &--content {
-        display: inline-block;
-        text-transform: uppercase;
-        color: #ffff;
-        padding: 20px 25px;
-        text-align: center;
-        text-decoration: none;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 14px;
-        font-weight: 500;
-      }
+    &--content {
+      display: inline-block;
+      text-transform: uppercase;
+      color: #ffff;
+      padding: 20px 25px;
+      text-align: center;
+      text-decoration: none;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 14px;
+      font-weight: 500;
     }
   }
+}
+
 .banner__colored--image {
   height: 100%;
 }
@@ -257,6 +322,7 @@ h2 {
 div.cloud p {
   transform: translate(5%, -80%)
 }
+
 .ti-star {
   position: relative;
   text-align: center;
@@ -283,22 +349,25 @@ p.price {
   display: flex;
 
 }
+
 .product:hover {
- .product__item--hover{
-   visibility: visible;
-   position: relative;
-   top: -200px;
-   transition: top 300ms ease-in-out;
- }
+  .product__item--hover {
+    visibility: visible;
+    position: relative;
+    top: -200px;
+    transition: top 300ms ease-in-out;
+  }
 
 
 }
+
 .product {
   position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   box-sizing: border-box;
+
   &__item {
     position: relative;
     justify-content: center;
@@ -308,16 +377,21 @@ p.price {
     padding-right: 15px;
     padding-left: 15px;
     box-sizing: border-box;
-    &--hover {top: -180px;
+
+    &--hover {
+      top: -180px;
       position: relative;
       visibility: hidden;
       display: flex;
       text-decoration: none;
       justify-content: center;
     }
-    &--details {:hover.item__name {
-      color: #ff5353;
-    }
+
+    &--details {
+      :hover.item__name {
+        color: #ff5353;
+      }
+
       p.item__name {
         margin: 10px 0 0 0;
         font-size: 14px;
@@ -326,6 +400,7 @@ p.price {
     }
   }
 }
+
 .entrance {
   position: relative;
   width: 50px;
@@ -341,22 +416,26 @@ p.price {
 }
 
 .entrance:hover {
-  background-color:#ff5353;
-  color:white;
+  background-color: #ff5353;
+  color: white;
 }
+
 .ti-eye {
 
   font-size: 15px;
   text-decoration: none;
 }
+
 span.ti-heart {
   font-size: 15px;
   text-decoration: none;
 }
+
 span.ti-shopping-cart {
   font-size: 15px;
   text-decoration: none;
 }
+
 .secondBannerTitle {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
@@ -382,7 +461,7 @@ footer.footer {
 
 .lists {
   position: relative;
- @include flex(flex, row, space-between, center);
+  @include flex(flex, row, space-between, center);
   //text-align: left;
 
 }
@@ -390,9 +469,10 @@ footer.footer {
 ul.list {
   list-style-type: none;
   margin: 0px 0px 0px 95px;
+
   &__wider {
-    width:400px;
-   display: inline-block;
+    width: 400px;
+    display: inline-block;
   }
 }
 
@@ -401,6 +481,7 @@ ul a {
     background-color: #ff5353;
   }
 }
+
 ul div {
   display: inline-block;
 }
@@ -455,7 +536,7 @@ li a {
   text-align: left;
   width: inherit;
   font-size: 13px;
- font-weight: 500;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -464,12 +545,15 @@ li a {
   font-size: 20px;
   text-align: center;
 }
+
 .ti-apple {
   font-size: 20px;
   text-align: center;
 }
+
 .button {
   position: relative;
+
   &__googl--content:hover {
     transition: 1ms;
     background-color: #ff5353;
@@ -483,9 +567,11 @@ li a {
     }
   }
 }
+
 .button__appl {
   height: 47px;
 }
+
 .button__appl--content {
   padding: 8px 8px 10px 8px;
   color: white;
@@ -495,6 +581,7 @@ li a {
   display: inline-block;
   text-transform: uppercase;
 }
+
 .socialmedia {
   height: 30px;
   width: 30px;
@@ -503,6 +590,7 @@ li a {
   position: relative;
   color: black;
 }
+
 .ti-facebook {
   text-decoration: none;
   position: absolute;
@@ -512,10 +600,11 @@ li a {
   transform: translate(-50%, -50%);
 }
 
-.socialmedia:hover{
-  background-color:#ff5353;
-  color:white;
+.socialmedia:hover {
+  background-color: #ff5353;
+  color: white;
 }
+
 .ti-twitter-alt {
   text-decoration: none;
   position: absolute;
@@ -524,6 +613,7 @@ li a {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
+
 .ti-pinterest-alt {
   text-decoration: none;
   position: absolute;
@@ -532,6 +622,7 @@ li a {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
+
 .ti-instagram {
   text-decoration: none;
   position: absolute;
@@ -540,6 +631,7 @@ li a {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
+
 p.copyright {
   color: #8888;
   font-size: 15px;
@@ -547,6 +639,7 @@ p.copyright {
 
 
 }
+
 a.red_link {
   color: #ff5353;
   text-decoration: none;
