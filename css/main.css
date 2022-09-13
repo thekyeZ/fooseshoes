@@ -280,27 +280,35 @@ p.price {
   align-items: center;
   position: relative;
   margin-bottom: 50px;
+  display: flex;
 }
 
-.product:hover {
-  position: relative;
-}
 .product:hover .product__item--hover {
   visibility: visible;
+  position: relative;
+  top: -200px;
+  transition: top 300ms ease-in-out;
 }
 
 .product {
   position: relative;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 .product__item {
   position: relative;
   justify-content: center;
   align-items: center;
   margin: 0;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-sizing: border-box;
 }
 .product__item--hover {
+  top: -180px;
   position: relative;
   visibility: hidden;
   display: flex;
@@ -543,8 +551,9 @@ li a {
 }
 
 p.copyright {
-  color: #565656;
+  color: rgba(136, 136, 136, 0.5333333333);
   font-size: 15px;
+  position: relative;
 }
 
 a.red_link {
