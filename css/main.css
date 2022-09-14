@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  margin: 0px 102.4px;
+  margin: 0px 256px;
 }
 .container__align {
   display: flex;
@@ -176,12 +176,14 @@ body {
   background-image: url("https://demo.themeies.com/silon/images/bg-1.jpg");
 }
 .banner__fluid {
+  max-height: 700px;
   position: relative;
   margin-right: auto;
   margin-left: auto;
   display: flex;
 }
 .banner__fluid--2 {
+  max-height: 500px;
   background-color: #e9e2d8;
 }
 .banner__column1 {
@@ -243,8 +245,12 @@ body {
   font-weight: 500;
 }
 
+.banner__first--image {
+  max-height: 100%;
+}
+
 .banner__colored--image {
-  height: 100%;
+  max-height: 100%;
 }
 
 p.tagline {
@@ -417,15 +423,16 @@ span.ti-shopping-cart {
 .secondBannerTitle {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
-  margin-bottom: 33px;
+  margin: 0 0 33px;
   font-size: 58px;
 }
 
 .secondBannerTitleMin {
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 54px;
+  margin: 0 0 54px;
   text-align: center;
+  font-size: 24px;
 }
 
 footer.footer {
@@ -606,10 +613,9 @@ li a {
   transform: translate(-50%, -50%);
 }
 
-p.copyright {
+.copyright {
   color: rgba(136, 136, 136, 0.5333333333);
   font-size: 15px;
-  position: relative;
 }
 
 a.red_link {
