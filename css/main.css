@@ -25,6 +25,7 @@ body {
   justify-content: center;
 }
 .container--left {
+  width: 50%;
   padding: 0px 15px;
   display: flex;
   flex-direction: row;
@@ -33,6 +34,7 @@ body {
   justify-content: flex-start;
 }
 .container--right {
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -45,6 +47,12 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .info {
@@ -188,46 +196,57 @@ body {
   color: #ff5353;
 }
 
-.banner {
-  background-repeat: no-repeat;
-  background-size: cover;
+.first-banner {
+  display: block;
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
   background-image: url("https://demo.themeies.com/silon/images/bg-1.jpg");
 }
-.banner__fluid {
-  max-height: 700px;
+.first-banner__fluid {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
   position: relative;
+}
+.first-banner__order {
+  width: 100%;
+  padding-right: -15px;
+  padding-left: -15px;
   margin-right: auto;
   margin-left: auto;
+  flex-wrap: wrap;
   display: flex;
-}
-.banner__fluid--2 {
-  max-height: 500px;
-  background-color: #e9e2d8;
-}
-.banner__column1 {
-  width: 50%;
-  position: relative;
-  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
-.banner__column1--content {
+.first-banner__order--column {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-banner__substance {
+  position: relative;
   width: 100%;
-  position: absolute;
-  left: 60%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-}
-.banner__column2 {
-  position: relative;
-  display: flex;
   justify-content: flex-end;
-  width: 50%;
+}
+.first-banner__image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
 }
 
 .content__button:hover.content__button--content {

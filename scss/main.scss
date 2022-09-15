@@ -9,10 +9,9 @@
 }
 
 @mixin wider-margin {
-  margin: 0 100px
+  margin: 0 100px;
 }
 
-;
 @mixin align-right {
   justify-content: flex-end;
 }
@@ -48,12 +47,14 @@ body {
   }
 
   &--left {
+    width: 50%;
     padding: 0px 15px;
     @include flex(flex, row, space-between, center);
     justify-content: flex-start;
   }
 
   &--right {
+    width: 50%;
     @include flex(flex, row, space-between, center);
     justify-content: flex-end;
     padding: 0px 15px;
@@ -63,7 +64,11 @@ body {
     @include flex(flex, row, space-between, center);
   }
 }
-
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .info {
   display: inline-block;
   height: 100%;
@@ -208,48 +213,54 @@ body {
   color: #ff5353;
 }
 
-.banner {
-  background-repeat: no-repeat;
-  background-size: cover;
+.first-banner {
+  display: block;
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
   background-image: url("https://demo.themeies.com/silon/images/bg-1.jpg");
 
-
   &__fluid {
-    max-height: 700px;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;}
 
-    &--2 {
-      max-height: 500px;
-      background-color: #e9e2d8;
-    }
-  }
-
-  &__column1 {
-    width: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &--content {
+    &__order {
       width: 100%;
-      position: absolute;
-      left: 60%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      @include flex(flex, column, space-around, center);
-    }
+      padding-right: -15px;
+      padding-left: -15px;
+      margin-right: auto;
+      margin-left: auto;
+      flex-wrap: wrap;
+      @include flex(flex, row, space-between, center);
+    &--column {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      padding: 0 15px;
+      @include flex(flex, row, space-between, center);
+    }}
+
+    //&--2 {
+    //  max-height: 500px;
+    //  background-color: #e9e2d8;
+    //}
+
+  &__substance {
+    position: relative;
+    width: 100%;
+    @include flex(flex, column, space-between, center);
+    @include align-right;
   }
 
-  &__column2 {
+  &__image {
     position: relative;
-    display: flex;
-    justify-content: flex-end;
-    width: 50%;
+    width: 100%;
+    height: auto;
+    @include align-left;
   }
 }
 
