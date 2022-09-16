@@ -312,13 +312,13 @@ h1 {
 }
 
 .featured-product__container {
-  padding: 0px 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   display: block;
   flex-wrap: wrap;
+  margin: 0 100px;
 }
 .featured-product__title {
   height: 123.188px;
@@ -468,62 +468,65 @@ h2 {
   font-size: 24px;
 }
 
-footer.footer {
+footer {
   background-color: #e9e2d8;
   width: auto;
-  height: 400px;
+}
+
+.footer-container {
   position: relative;
-  justify-content: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 100px;
+  padding: 80px 0 0 0;
+}
+
+.footer-column {
+  padding: 0 15px;
 }
 
 .lists {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 }
 
-ul.list {
-  list-style-type: none;
-  margin: 0px 0px 0px 95px;
-}
-ul.list__wider {
-  width: 400px;
-  display: inline-block;
-}
-
-ul a :hover {
-  background-color: #ff5353;
-}
-
-ul div {
-  display: inline-block;
-}
-
-.list h4 {
-  text-transform: uppercase;
-  position: relative;
-}
-
-.list li {
+.list {
   text-align: left;
   position: relative;
+  font-size: 14px;
+  list-style-type: none;
+  margin-bottom: 30px;
+  font-weight: 400;
 }
-.list li :hover {
+.list .list__item {
+  display: inline-block;
+  margin: 8px 0;
+  color: #888888;
+  text-decoration: none;
+}
+.list__wider {
+  display: inline-block;
+}
+.list ul {
+  list-style: none;
+}
+.list ul :hover a {
   color: #ff5353;
 }
 
-li a {
-  font-size: 14px;
-  text-decoration: none;
-  text-align: left;
-  color: rgba(136, 136, 136, 0.5333333333);
-  margin-bottom: 5px;
+.footer-applications {
+  margin-bottom: 40px;
+}
+
+.buttons {
+  margin-bottom: 30px;
+}
+
+.list__title {
+  text-transform: uppercase;
+  position: relative;
 }
 
 .button__googl--content {
@@ -536,12 +539,12 @@ li a {
   text-transform: uppercase;
 }
 
-._buttonTexts {
+.button-texts {
   position: relative;
   display: inline-block;
 }
 
-.smallText {
+.small-text {
   text-align: left;
   height: 8px;
   font-size: 10px;
@@ -549,7 +552,7 @@ li a {
   margin: 5px 0px;
 }
 
-.biggerText {
+.bigger-text {
   text-align: left;
   width: inherit;
   font-size: 13px;
@@ -653,9 +656,16 @@ li a {
   transform: translate(-50%, -50%);
 }
 
+.copyright-container {
+  margin: 15px;
+}
+
 .copyright {
+  position: relative;
+  text-align: center;
   color: rgba(136, 136, 136, 0.5333333333);
   font-size: 15px;
+  background-color: #e9e2d8;
 }
 
 a.red_link {

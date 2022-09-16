@@ -321,32 +321,28 @@ img {
 //  margin-left: auto;
 //  margin-right: auto;
 //}
-
 h1 {
   font-size: 50px;
   text-align: center;
 }
-
 .featured-product {
   &__container {
-    padding: 0px 50px;
     @include flex(flex, column, space-between, center);
     display: block;
     flex-wrap: wrap;
+    @include wider-margin;
   }
 
   &__title {
     height: 123.188px;
   }
 }
-
 h2 {
   font-size: 36px;
   text-align: center;
   text-transform: uppercase;
   padding: 0px 50px;
 }
-
 .ti-shopping-cart {
   text-decoration: none;
   position: relative;
@@ -375,17 +371,12 @@ h2 {
   margin: 0;
   padding: 0;
 }
-
-
-
 .columns {
   @include flex(flex, row, space-around, center);
   position: relative;
   margin-bottom: 50px;
   display: flex;
-
 }
-
 .product:hover {
   .product__item--hover {
     visibility: visible;
@@ -394,7 +385,6 @@ h2 {
     transition: top 300ms ease-in-out;
   }
 }
-
 .product {
   position: relative;
   display: flex;
@@ -499,61 +489,73 @@ h2 {
   font-size: 24px;
 }
 
-footer.footer {
+footer {
   background-color: #e9e2d8;
   width: auto;
-  height: 400px;
-  position: relative;
-  justify-content: center;
-  @include flex(flex, column, space-around, center);
 }
 
+.footer-container {
+  position: relative;
+  @include flex(flex, row, space-around, flex-start);
+  flex-wrap: wrap;
+  @include wider-margin;
+padding: 80px 0 0 0;
+}
+.footer-column {
+  padding: 0 15px;
+
+}
 .lists {
   position: relative;
-  @include flex(flex, row, space-between, center);
 }
 
-ul.list {
+.list {
+  text-align: left;
+  position: relative;
+  font-size: 14px;
   list-style-type: none;
-  margin: 0px 0px 0px 95px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  .list__item {
+    display: inline-block;
+    margin: 8px 0;
+    color: #888888;
+    text-decoration: none;
 
+  }
   &__wider {
-    width: 400px;
     display: inline-block;
   }
-}
-
-ul a {
-  :hover {
-    background-color: #ff5353;
+  ul {
+    list-style: none;
+    :hover a {
+      color: #ff5353}
   }
 }
-
-ul div {
-  display: inline-block;
+.footer-applications {
+  margin-bottom: 40px;
 }
+.buttons {
+  margin-bottom: 30px;
+}
+//.list__item {
+//
+//text-decoration: none;
+//  color: #8888;
+//  :hover  {
+//    background-color: #ff5353;
+//  }
+//}
+//ul div {
+//  display: inline-block;
+//
+//}
 
-.list h4 {
+.list__title {
   text-transform: uppercase;
   position: relative;
 }
 
-.list li {
-  text-align: left;
-  position: relative;
-
-  :hover {
-    color: #ff5353;
-  }
-}
-
-li a {
-  font-size: 14px;
-  text-decoration: none;
-  text-align: left;
-  color: #8888;
-  margin-bottom: 5px;
-}
 
 .button__googl--content {
   padding: 8px 8px 10px 8px;
@@ -564,39 +566,33 @@ li a {
   display: inline-block;
   text-transform: uppercase;
 }
-
-._buttonTexts {
+.button-texts {
   position: relative;
   display: inline-block;
 }
-
-.smallText {
+.small-text {
   text-align: left;
   height: 8px;
   font-size: 10px;
   font-family: "Roboto", sans-serif;
   margin: 5px 0px;
 }
-
-.biggerText {
+.bigger-text {
   text-align: left;
   width: inherit;
   font-size: 13px;
   font-weight: 500;
   margin: 0;
 }
-
 .ti-android {
   color: #ff5353;
   font-size: 20px;
   text-align: center;
 }
-
 .ti-apple {
   font-size: 20px;
   text-align: center;
 }
-
 .button {
   position: relative;
 
@@ -613,11 +609,9 @@ li a {
     }
   }
 }
-
 .button__appl {
   height: 47px;
 }
-
 .button__appl--content {
   padding: 8px 8px 10px 8px;
   color: white;
@@ -627,7 +621,6 @@ li a {
   display: inline-block;
   text-transform: uppercase;
 }
-
 .icons-footer {
   text-decoration: none;
   @include align-left;
@@ -643,7 +636,6 @@ li a {
   position: relative;
   color: black;
 }
-
 .ti-facebook {
   text-decoration: none;
   position: absolute;
@@ -652,12 +644,10 @@ li a {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-
 .socialmedia:hover {
   background-color: #ff5353;
   color: white;
 }
-
 .ti-twitter-alt {
   text-decoration: none;
   position: absolute;
@@ -666,7 +656,6 @@ li a {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-
 .ti-pinterest-alt {
   text-decoration: none;
   position: absolute;
@@ -675,7 +664,6 @@ li a {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-
 .ti-instagram {
   text-decoration: none;
   position: absolute;
@@ -684,13 +672,16 @@ li a {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
-
+.copyright-container {
+  margin: 15px;
+}
 .copyright {
+  position: relative;
+  text-align: center;
   color: #8888;
   font-size: 15px;
-
+  background-color: #e9e2d8;
 }
-
 a.red_link {
   color: #ff5353;
   text-decoration: none;
