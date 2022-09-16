@@ -566,6 +566,14 @@ footer {
   text-align: center;
 }
 
+.buttons:hover .button__googl--content {
+  color: white;
+  background-color: #ff5353;
+}
+.buttons:hover .button__googl--content .ti-android {
+  color: white;
+}
+
 .ti-apple {
   font-size: 20px;
   text-align: center;

@@ -17,10 +17,8 @@
 }
 
 @mixin align-left {
-  justify-content: flex-start
+  justify-content: flex-start;
 }
-
-;
 
 html {
   box-sizing: border-box;
@@ -213,11 +211,9 @@ img {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 .dropdown:hover .dropbtn {
   color: #ff5353;
 }
-
 .banner {
   display: block;
   width: 100%;
@@ -260,7 +256,6 @@ img {
     @include align-left;
   }
 }
-
 .first-banner {
   background-repeat: no-repeat;
   background-position: center top;
@@ -438,7 +433,6 @@ h2 {
     text-align: center;
     color: black;
   }}
-
 .entrance {
   position: relative;
   width: 50px;
@@ -452,35 +446,21 @@ h2 {
   align-items: center;
   justify-content: center;
 }
-
 .entrance:hover {
   background-color: #ff5353;
   color: white;
 }
-
 .ti-eye {
 
   font-size: 15px;
   text-decoration: none;
 }
-
-//span.ti-heart {
-//  font-size: 15px;
-//  text-decoration: none;
-//}
-//
-//span.ti-shopping-cart {
-//  font-size: 15px;
-//  text-decoration: none;
-//}
-
 .second-banner__title {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
   margin: 0 0 33px;
   font-size: 58px;
 }
-
 .second-banner__title--subtitle {
   font-weight: 300;
   text-transform: uppercase;
@@ -488,12 +468,10 @@ h2 {
   text-align: center;
   font-size: 24px;
 }
-
 footer {
   background-color: #e9e2d8;
   width: auto;
 }
-
 .footer-container {
   position: relative;
   @include flex(flex, row, space-around, flex-start);
@@ -508,7 +486,6 @@ padding: 80px 0 0 0;
 .lists {
   position: relative;
 }
-
 .list {
   text-align: left;
   position: relative;
@@ -538,25 +515,10 @@ padding: 80px 0 0 0;
 .buttons {
   margin-bottom: 30px;
 }
-//.list__item {
-//
-//text-decoration: none;
-//  color: #8888;
-//  :hover  {
-//    background-color: #ff5353;
-//  }
-//}
-//ul div {
-//  display: inline-block;
-//
-//}
-
 .list__title {
   text-transform: uppercase;
   position: relative;
 }
-
-
 .button__googl--content {
   padding: 8px 8px 10px 8px;
   color: black;
@@ -588,6 +550,13 @@ padding: 80px 0 0 0;
   color: #ff5353;
   font-size: 20px;
   text-align: center;
+}
+.buttons:hover {
+  .button__googl--content{
+    color: white;
+    background-color: #ff5353;
+    .ti-android{ color: white}}
+
 }
 .ti-apple {
   font-size: 20px;
@@ -627,7 +596,6 @@ padding: 80px 0 0 0;
   display: flex;
   align-items: flex-start;
 }
-
 .socialmedia {
   height: 30px;
   width: 30px;
