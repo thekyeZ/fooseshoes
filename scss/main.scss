@@ -95,7 +95,7 @@ img {
 }
 
 
-.cloud {
+.counter {
   position: absolute;
   display: flex;
   align-items: center;
@@ -129,12 +129,6 @@ img {
   position: relative;
   color: black;
   left: 3px;
-}
-
-.sky {
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .logo {
@@ -294,18 +288,12 @@ h1 {
   text-align: center;
 }
 
-.featured-product {
-  &__container {
+.featured-product__container {
     @include flex(flex, column, space-between, center);
     display: block;
     flex-wrap: wrap;
     @include wider-margin;
   }
-
-  &__title {
-
-  }
-}
 
 h2 {
   font-size: 36px;
@@ -655,9 +643,11 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
 .footer-applications {
   padding: 0 0 0 40px;
 }
+
 .copyright {
   padding: 20px;
   position: relative;
@@ -775,7 +765,8 @@ a.red-link {
 
     &__item {
       list-style: none;
-      display: none; @include behavior;
+      display: none;
+      @include behavior;
     }
 
     :hover.menu__item {
@@ -942,7 +933,8 @@ a.red-link {
 
     &__item {
       list-style: none;
-      display: none;   @include behavior;
+      display: none;
+      @include behavior;
     }
 
     :hover.menu__item {

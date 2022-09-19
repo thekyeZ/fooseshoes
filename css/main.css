@@ -67,7 +67,7 @@ img {
   width: 100%;
 }
 
-.cloud {
+.counter {
   position: absolute;
   display: flex;
   align-items: center;
@@ -101,12 +101,6 @@ img {
   position: relative;
   color: black;
   left: 3px;
-}
-
-.sky {
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .logo {
@@ -278,6 +272,7 @@ h1 {
   flex-wrap: wrap;
   margin: 0 100px;
 }
+
 h2 {
   font-size: 36px;
   text-align: center;
