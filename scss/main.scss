@@ -651,11 +651,15 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-.copyright-container {
-  margin: 15px;
+footer {
+  display: flex;
+  flex-direction: column;
 }
-
+.footer-applications {
+  padding: 0 0 0 40px;
+}
 .copyright {
+  padding: 20px;
   position: relative;
   text-align: center;
   color: #8888;
@@ -663,7 +667,7 @@ footer {
   background-color: #e9e2d8;
 }
 
-a.red_link {
+a.red-link {
   color: #ff5353;
   text-decoration: none;
 }
@@ -700,11 +704,12 @@ a.red_link {
     &__item {
       list-style: none;
       display: none;
+      @include behavior;
     }
 
     :hover.menu__item {
       color: #ff5353;
-      @include behavior;
+
     }
   }
   .hamburger-menu {
@@ -740,7 +745,6 @@ a.red_link {
   }
 }
 
-
 @media (min-width: 424px) and (max-width: 575px) {
   .navigation-bar {
     height: 90.4px;
@@ -771,12 +775,12 @@ a.red_link {
 
     &__item {
       list-style: none;
-      display: none;
+      display: none; @include behavior;
     }
 
     :hover.menu__item {
       color: #ff5353;
-      @include behavior;
+
     }
   }
   .hamburger-menu {
@@ -808,8 +812,8 @@ a.red_link {
     flex-wrap: wrap;
   }
   .button__apple, .button__google {
-     width: 50%;
-   }
+    width: 50%;
+  }
   .footer-row {
     max-width: 540px;
     flex-wrap: wrap;
@@ -902,6 +906,7 @@ a.red_link {
   }
 
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .header__top {
     display: inline-block;
@@ -937,12 +942,12 @@ a.red_link {
 
     &__item {
       list-style: none;
-      display: none;
+      display: none;   @include behavior;
     }
 
     :hover.menu__item {
       color: #ff5353;
-      @include behavior;
+
     }
   }
   .navigation-bar {
@@ -1021,7 +1026,6 @@ a.red_link {
   }
 
 }
-
 
 @media (min-width: 992px) {
   .container {
@@ -1110,7 +1114,8 @@ a.red_link {
     @include flex(flex, column, space-between, center);
     display: block;
     flex-wrap: wrap;
-    @include wider-margin;}
+    @include wider-margin;
+  }
   .footer-container {
     padding: 80px 15px;
     margin: auto;
