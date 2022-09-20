@@ -47,7 +47,6 @@ img {
   height: auto;
 }
 
-
 .container {
   &__align {
     @include flex(flex, row, space-between, center);
@@ -93,7 +92,6 @@ img {
     width: 100%;
   }
 }
-
 
 .counter {
   position: absolute;
