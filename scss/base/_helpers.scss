@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+@mixin flex($parameter1,$parameter2,$parameter3,$parameter4) {
+  display: $parameter1;
+  flex-direction: $parameter2;
+  justify-content: $parameter3;
+  align-items: $parameter4;
+}
+@mixin wider-margin {
+  margin: 0 100px;
+}
+
+@mixin align-right {
+  justify-content: flex-end;
+}
+
+@mixin align-left {
+  justify-content: flex-start;
+}
+@mixin behavior {
+  transition: all 300ms ease-in-out;
+}
+
+@mixin column-margin {
+  margin: 0 0 0 80px;
+}

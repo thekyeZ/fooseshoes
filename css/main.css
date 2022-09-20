@@ -1,49 +1,203 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap");
 @import "normalize.css";
-html {
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap");
+footer {
+  background-color: #e9e2d8;
+  width: auto;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+.lists {
+  position: relative;
 }
 
-body {
-  background-color: white;
-  font-family: "Roboto", sans-serif;
-}
-
-img {
-  display: block;
+.list {
+  text-align: left;
+  position: relative;
+  font-size: 14px;
+  list-style-type: none;
+  margin-bottom: 30px;
+  font-weight: 400;
   width: 100%;
-  height: auto;
+}
+.list .list__item {
+  display: inline-block;
+  margin: 8px 0;
+  color: #888888;
+  text-decoration: none;
+}
+.list__wider {
+  display: inline-block;
+}
+.list ul {
+  list-style: none;
+}
+.list ul :hover a {
+  color: #ff5353;
 }
 
-.container__align {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 48.6px;
-  margin: 0 100px;
+.buttons {
+  margin-bottom: 30px;
 }
-.container--left {
-  width: 50%;
-  padding: 0px 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: flex-start;
+
+.list__title {
+  text-transform: uppercase;
+  position: relative;
 }
-.container--right {
-  width: 50%;
+
+.button__google--content {
+  padding: 8px 8px 10px 8px;
+  color: black;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.button-texts {
+  position: relative;
+  display: inline-block;
+}
+
+.small-text {
+  text-align: left;
+  height: 8px;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  margin: 5px 0px;
+}
+
+.bigger-text {
+  text-align: left;
+  width: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.ti-android {
+  color: #ff5353;
+  font-size: 20px;
+  text-align: center;
+}
+
+.buttons:hover .button__google--content {
+  color: white;
+  background-color: #ff5353;
+}
+.buttons:hover .button__google--content .ti-android {
+  color: white;
+}
+
+.ti-apple {
+  font-size: 20px;
+  text-align: center;
+}
+
+.button {
+  position: relative;
+}
+.button__google--content:hover {
+  transition: 1ms;
+  background-color: #ff5353;
+}
+.button__google--content:hover ._buttonTexts {
+  color: white;
+}
+.button__google--content:hover .ti-android {
+  color: #fff;
+}
+
+.button__apple {
+  height: 47px;
+}
+
+.button__apple--content {
+  padding: 8px 8px 10px 8px;
+  color: white;
+  background-color: #ff5353;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.icons-footer {
+  text-decoration: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0px 15px;
+  align-items: flex-start;
+}
+
+.socialmedia {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  margin: 0px 10px 0px 0px;
+  position: relative;
+  color: black;
+}
+
+.ti-facebook {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.socialmedia:hover {
+  background-color: #ff5353;
+  color: white;
+}
+
+.ti-twitter-alt {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.ti-pinterest-alt {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.ti-instagram {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-applications {
+  padding: 0 0 0 40px;
+}
+
+.copyright {
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  color: rgba(136, 136, 136, 0.5333333333);
+  font-size: 15px;
+  background-color: #e9e2d8;
+}
+
+a.red-link {
+  color: #ff5353;
+  text-decoration: none;
 }
 
 .info {
@@ -86,7 +240,6 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  transition: all 300ms ease-in-out;
 }
 
 .ti-align-justify {
@@ -152,6 +305,52 @@ img {
 
 .dropdown:hover .dropbtn {
   color: #ff5353;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container__align {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 48.6px;
+  margin: 0 100px;
+}
+.container--left {
+  width: 50%;
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container--right {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 15px;
 }
 
 .banner {
@@ -415,207 +614,6 @@ h2 {
   margin: 0 0 54px;
   text-align: center;
   font-size: 24px;
-}
-
-footer {
-  background-color: #e9e2d8;
-  width: auto;
-}
-
-.lists {
-  position: relative;
-}
-
-.list {
-  text-align: left;
-  position: relative;
-  font-size: 14px;
-  list-style-type: none;
-  margin-bottom: 30px;
-  font-weight: 400;
-  width: 100%;
-}
-.list .list__item {
-  display: inline-block;
-  margin: 8px 0;
-  color: #888888;
-  text-decoration: none;
-}
-.list__wider {
-  display: inline-block;
-}
-.list ul {
-  list-style: none;
-}
-.list ul :hover a {
-  color: #ff5353;
-}
-
-.buttons {
-  margin-bottom: 30px;
-}
-
-.list__title {
-  text-transform: uppercase;
-  position: relative;
-}
-
-.button__google--content {
-  padding: 8px 8px 10px 8px;
-  color: black;
-  background-color: white;
-  border-radius: 8px;
-  text-align: center;
-  display: inline-block;
-  text-transform: uppercase;
-}
-
-.button-texts {
-  position: relative;
-  display: inline-block;
-}
-
-.small-text {
-  text-align: left;
-  height: 8px;
-  font-size: 10px;
-  font-family: "Roboto", sans-serif;
-  margin: 5px 0px;
-}
-
-.bigger-text {
-  text-align: left;
-  width: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  margin: 0;
-}
-
-.ti-android {
-  color: #ff5353;
-  font-size: 20px;
-  text-align: center;
-}
-
-.buttons:hover .button__google--content {
-  color: white;
-  background-color: #ff5353;
-}
-.buttons:hover .button__google--content .ti-android {
-  color: white;
-}
-
-.ti-apple {
-  font-size: 20px;
-  text-align: center;
-}
-
-.button {
-  position: relative;
-}
-.button__google--content:hover {
-  transition: 1ms;
-  background-color: #ff5353;
-}
-.button__google--content:hover ._buttonTexts {
-  color: white;
-}
-.button__google--content:hover .ti-android {
-  color: #fff;
-}
-
-.button__apple {
-  height: 47px;
-}
-
-.button__apple--content {
-  padding: 8px 8px 10px 8px;
-  color: white;
-  background-color: #ff5353;
-  border-radius: 8px;
-  text-align: center;
-  display: inline-block;
-  text-transform: uppercase;
-}
-
-.icons-footer {
-  text-decoration: none;
-  justify-content: flex-start;
-  display: flex;
-  align-items: flex-start;
-}
-
-.socialmedia {
-  height: 30px;
-  width: 30px;
-  background-color: white;
-  margin: 0px 10px 0px 0px;
-  position: relative;
-  color: black;
-}
-
-.ti-facebook {
-  text-decoration: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-
-.socialmedia:hover {
-  background-color: #ff5353;
-  color: white;
-}
-
-.ti-twitter-alt {
-  text-decoration: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-
-.ti-pinterest-alt {
-  text-decoration: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-
-.ti-instagram {
-  text-decoration: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-applications {
-  padding: 0 0 0 40px;
-}
-
-.copyright {
-  padding: 20px;
-  position: relative;
-  text-align: center;
-  color: rgba(136, 136, 136, 0.5333333333);
-  font-size: 15px;
-  background-color: #e9e2d8;
-}
-
-a.red-link {
-  color: #ff5353;
-  text-decoration: none;
 }
 
 @media (min-width: 20px) and (max-width: 423px) {
