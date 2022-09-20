@@ -193,6 +193,7 @@ img {
   }
 
   &__order {
+    position: relative;
     width: 100%;
     padding-right: -15px;
     padding-left: -15px;
@@ -212,14 +213,14 @@ img {
 
   &__substance {
     position: relative;
-    width: 100%;
-    @include flex(flex, column, space-between, center);
+    width: 50%;
+   @include flex(flex, column, space-between, center);
     @include align-right;
   }
 
   &__image {
     position: relative;
-    width: 100%;
+    //width: 100%;
     height: auto;
     @include align-left;
   }

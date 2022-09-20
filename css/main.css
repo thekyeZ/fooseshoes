@@ -165,6 +165,7 @@ img {
   margin: 0 auto;
 }
 .banner__order {
+  position: relative;
   width: 100%;
   padding-right: -15px;
   padding-left: -15px;
@@ -188,7 +189,7 @@ img {
 }
 .banner__substance {
   position: relative;
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -197,7 +198,6 @@ img {
 }
 .banner__image {
   position: relative;
-  width: 100%;
   height: auto;
   justify-content: flex-start;
 }
