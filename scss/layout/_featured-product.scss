@@ -1,0 +1,148 @@
+
+.featured-product__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  display: block;
+  flex-wrap: wrap;
+  margin: 0 100px;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0px 0 50px 0;
+}
+
+.ti-shopping-cart {
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.ti-heart {
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.ti-search {
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.ti-star {
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+  color: #ff5353;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.columns {
+  @include flex(flex, row, space-around, center);
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.product:hover {
+  .product__item--hover {
+    visibility: visible;
+    position: relative;
+    top: -200px;
+    transition: top 300ms ease-in-out;
+  }
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  &__item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+
+    &--hover {
+      top: -180px;
+      position: relative;
+      visibility: hidden;
+      display: flex;
+      text-decoration: none;
+      justify-content: center;
+    }
+
+    &--details {
+      :hover.item__name {
+        color: #ff5353;
+      }
+
+      p.item__name {
+        font-size: 14px;
+        color: #888;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+.item {
+  &__rating {
+    text-align: center;
+  }
+
+  &__price {
+    position: relative;
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+  }
+}
+
+.entrance {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 40px;
+  text-decoration: none;
+  margin: 5px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.entrance:hover {
+  background-color: #ff5353;
+  color: white;
+}
+
+.ti-eye {
+
+  font-size: 15px;
+  text-decoration: none;
+}

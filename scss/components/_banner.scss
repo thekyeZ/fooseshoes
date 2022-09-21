@@ -1,0 +1,87 @@
+
+.banner {
+  display: block;
+  width: 100%;
+  position: relative;
+
+  &__fluid {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &__order {
+    position: relative;
+    width: 100%;
+    padding-right: -15px;
+    padding-left: -15px;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+    @include flex(flex, row, space-between, center);
+
+    &--column {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      padding: 0 15px;
+      @include flex(flex, row, space-between, center);
+    }
+  }
+
+  &__substance {
+    position: relative;
+    width: 50%;
+    @include flex(flex, column, space-between, center);
+    @include align-right;
+  }
+
+  &__image {
+    position: relative;
+    //width: 100%;
+    height: auto;
+    @include align-left;
+  }
+}
+
+.first-banner {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-image: url("https://demo.themeies.com/silon/images/bg-1.jpg");
+
+  &__subtitle {
+    height: 11.2px;
+    text-transform: uppercase;
+    color: #565656;
+    margin: 0;
+  }
+}
+
+.second-banner {
+  background-color: #e9e2d8;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__title {
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    margin: 0 0 33px;
+    font-size: 58px;
+
+    &--subtitle {
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 0 0 54px;
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
