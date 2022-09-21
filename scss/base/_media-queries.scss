@@ -78,13 +78,18 @@
     @include flex(flex, column, space-around, center);
   }
   .buttons {
-    display: inline-block;
+    display: flex;
+    width: auto;
   }
   .button__apple, .button__google {
     position: relative;
     flex-basis: 50%;
   }
-
+.button__google--content,.button__apple--content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 }
 
 @media (min-width: 424px) and (max-width: 575px) {
@@ -475,6 +480,9 @@
         }
       }
     }
+  }
+  .dropbtn {
+    padding: 37px 15px;
   }
   .featured-product__container {
     @include flex(flex, column, space-between, center);

@@ -200,6 +200,33 @@ a.red-link {
   text-decoration: none;
 }
 
+.container__align {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 48.6px;
+  margin: 0 100px;
+}
+.container--left {
+  width: 50%;
+  padding: 0px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container--right {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 15px;
+}
+
 .info {
   display: inline-block;
   height: 100%;
@@ -307,52 +334,6 @@ a.red-link {
   color: #ff5353;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  background-color: white;
-  font-family: "Roboto", sans-serif;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.container__align {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 48.6px;
-  margin: 0 100px;
-}
-.container--left {
-  width: 50%;
-  padding: 0px 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: flex-start;
-}
-.container--right {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0px 15px;
-}
-
 .banner {
   display: block;
   width: 100%;
@@ -407,6 +388,12 @@ img {
   background-size: cover;
   background-image: url("https://demo.themeies.com/silon/images/bg-1.jpg");
 }
+.first-banner__subtitle {
+  height: 11.2px;
+  text-transform: uppercase;
+  color: #565656;
+  margin: 0;
+}
 
 .second-banner {
   background-color: #e9e2d8;
@@ -414,6 +401,24 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.second-banner__title {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  margin: 0 0 33px;
+  font-size: 58px;
+}
+.second-banner__title--subtitle {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0 0 54px;
+  text-align: center;
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
 }
 
 .content__button:hover.content__button--content {
@@ -448,18 +453,6 @@ img {
   margin-right: auto;
   font-size: 14px;
   font-weight: 500;
-}
-
-.first-banner__subtitle {
-  height: 11.2px;
-  text-transform: uppercase;
-  color: #565656;
-  margin: 0;
-}
-
-h1 {
-  font-size: 50px;
-  text-align: center;
 }
 
 .featured-product__container {
@@ -601,19 +594,23 @@ h2 {
   text-decoration: none;
 }
 
-.second-banner__title {
-  font-family: "Dancing Script", cursive;
-  font-weight: 700;
-  margin: 0 0 33px;
-  font-size: 58px;
+html {
+  box-sizing: border-box;
 }
 
-.second-banner__title--subtitle {
-  font-weight: 300;
-  text-transform: uppercase;
-  margin: 0 0 54px;
-  text-align: center;
-  font-size: 24px;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 20px) and (max-width: 423px) {
@@ -692,6 +689,19 @@ h2 {
     justify-content: space-around;
     align-items: center;
   }
+  .buttons {
+    display: flex;
+    width: auto;
+  }
+  .button__apple, .button__google {
+    position: relative;
+    flex-basis: 50%;
+  }
+  .button__google--content, .button__apple--content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 @media (min-width: 424px) and (max-width: 575px) {
   .navigation-bar {
@@ -735,11 +745,11 @@ h2 {
   .hamburger-menu {
     visibility: visible;
   }
-  .banner__order--column {
-    width: 100%;
-  }
   .banner__order {
     flex-wrap: wrap-reverse;
+  }
+  .banner__order--column {
+    width: 100%;
   }
   .banner__substance {
     padding: 30px;
@@ -825,11 +835,11 @@ h2 {
   .navigation-bar__item--element :hover.icons-header {
     color: #ff5353;
   }
-  .banner__order--column {
-    width: 100%;
-  }
   .banner__order {
     flex-wrap: wrap-reverse;
+  }
+  .banner__order--column {
+    width: 100%;
   }
   .banner__substance {
     padding: 30px;
@@ -955,11 +965,11 @@ h2 {
   .navigation-bar .footer-column {
     margin: 0 15px;
   }
-  .banner__order--column {
-    width: 100%;
-  }
   .banner__order {
     flex-wrap: wrap-reverse;
+  }
+  .banner__order--column {
+    width: 100%;
   }
   .banner__substance {
     padding: 30px;

@@ -2,7 +2,23 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+@mixin flex($parameter1,$parameter2,$parameter3,$parameter4) {
+  display: $parameter1;
+  flex-direction: $parameter2;
+  justify-content: $parameter3;
+  align-items: $parameter4;
+}
+@mixin wider-margin {
+  margin: 0 100px;
+}
 
+@mixin align-right {
+  justify-content: flex-end;
+}
+
+@mixin align-left {
+  justify-content: flex-start;
+}
 .container {
   &__align {
     @include flex(flex, row, space-between, center);
@@ -113,14 +129,15 @@
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  padding-inline-start: 0px;
+  font-size: 11px;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 10px 10px;
+  padding: 20px 20px;
   text-decoration: none;
   display: block;
-
 }
 
 .dropdown-content a:hover {
