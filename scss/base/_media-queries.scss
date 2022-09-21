@@ -77,6 +77,14 @@
   .columns {
     @include flex(flex, column, space-around, center);
   }
+  .buttons {
+    display: inline-block;
+  }
+  .button__apple, .button__google {
+    position: relative;
+    flex-basis: 50%;
+  }
+
 }
 
 @media (min-width: 424px) and (max-width: 575px) {
@@ -121,15 +129,21 @@
   .hamburger-menu {
     visibility: visible;
   }
-  .banner__order--column {
-    width: 100%;
+
+  .banner {
+    &__order {
+      flex-wrap: wrap-reverse;
+
+      &--column {
+        width: 100%;
+      }
+    }
+
+    &__substance {
+      padding: 30px;
+    }
   }
-  .banner__order {
-    flex-wrap: wrap-reverse;
-  }
-  .banner__substance {
-    padding: 30px;
-  }
+
   .second-banner {
     background-color: #e9e2d8;
     width: 100%;
@@ -137,27 +151,33 @@
     flex-direction: column;
     align-items: center;
   }
+
   .featured-product__container {
     @include flex(flex, column, space-between, center);
     display: block;
     flex-wrap: wrap;
     margin: 0 0 0 0;
   }
+
   .product__item--hover {
     flex-wrap: wrap;
   }
+
   .button__apple, .button__google {
     width: 50%;
   }
+
   .footer-row {
     max-width: 540px;
     flex-wrap: wrap;
     margin: auto;
     @include flex(flex, row, flex-start, flex-start);
   }
+
   .footer-column {
     margin: 0 15px;
   }
+
   .footer-container {
     width: 100%;
     position: relative;
@@ -205,15 +225,20 @@
       }
     }
   }
-  .banner__order--column {
-    width: 100%;
+  .banner {
+    &__order {
+      flex-wrap: wrap-reverse;
+
+      &--column {
+        width: 100%;
+      }
+    }
+
+    &__substance {
+      padding: 30px;
+    }
   }
-  .banner__order {
-    flex-wrap: wrap-reverse;
-  }
-  .banner__substance {
-    padding: 30px;
-  }
+
   .second-banner {
     background-color: #e9e2d8;
     width: 100%;
@@ -239,7 +264,6 @@
   .footer-column {
     margin: 0 15px;
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -330,15 +354,21 @@
       margin: 0 15px;
     }
   }
-  .banner__order--column {
-    width: 100%;
+
+  .banner {
+    &__order {
+      flex-wrap: wrap-reverse;
+
+      &--column {
+        width: 100%;
+      }
+    }
+
+    &__substance {
+      padding: 30px;
+    }
   }
-  .banner__order {
-    flex-wrap: wrap-reverse;
-  }
-  .banner__substance {
-    padding: 30px;
-  }
+
   .second-banner {
     background-color: #e9e2d8;
     width: 100%;
