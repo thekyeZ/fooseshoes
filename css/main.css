@@ -37,6 +37,9 @@ footer {
 .buttons {
   margin-bottom: 30px;
 }
+.buttons a {
+  text-decoration: none;
+}
 
 .list__title {
   text-transform: uppercase;
@@ -312,11 +315,14 @@ a.red-link {
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+  font-size: 11px;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 10px 10px;
+  padding: 20px 20px;
   text-decoration: none;
   display: block;
 }
@@ -1083,6 +1089,9 @@ img {
   }
   .navigation-bar__item--element :hover.icons-header {
     color: #ff5353;
+  }
+  .dropbtn {
+    padding: 37px 15px;
   }
   .featured-product__container {
     display: flex;
