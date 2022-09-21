@@ -481,6 +481,9 @@
       }
     }
   }
+  .dropbtn {
+    padding: 37px 15px;
+  }
   .featured-product__container {
     @include flex(flex, column, space-between, center);
     display: block;
