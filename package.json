@@ -14,5 +14,10 @@
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.42.1"
   },
-  "browserslist": ["defaults"]
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
 }

@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+
+.content__button:hover.content__button--content {
+  color: #181886;
+  background-color: white;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  padding: 15px 15px;
+  @include flex(flex, column, space-between, center);
+  flex-wrap: nowrap;
+
+  &__button {
+    background: #ff5353;
+    width: 170px;
+    height: 51.2px;
+    border-radius: 8px;
+
+    &--content {
+      display: inline-block;
+      text-transform: uppercase;
+      color: #ffff;
+      padding: 20px 25px;
+      text-align: center;
+      text-decoration: none;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

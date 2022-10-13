@@ -1,0 +1,220 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+
+footer {
+  background-color: #e9e2d8;
+  width: auto;
+}
+
+.lists {
+  position: relative;
+
+}
+
+.list {
+  text-align: left;
+  position: relative;
+  font-size: 14px;
+  list-style-type: none;
+  margin-bottom: 30px;
+  font-weight: 400;
+  width: 100%;
+
+  .list__item {
+    display: inline-block;
+    margin: 8px 0;
+    color: #888888;
+    text-decoration: none;
+  }
+
+  &__wider {
+    display: inline-block;
+  }
+
+  ul {
+    list-style: none;
+
+    :hover a {
+      color: #ff5353
+    }
+  }
+}
+
+
+.buttons {
+  margin-bottom: 30px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.list__title {
+  text-transform: uppercase;
+  position: relative;
+}
+
+.button__google--content {
+  padding: 8px 8px 10px 8px;
+  color: black;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.button-texts {
+  position: relative;
+  display: inline-block;
+}
+
+.small-text {
+  text-align: left;
+  height: 8px;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  margin: 5px 0px;
+}
+
+.bigger-text {
+  text-align: left;
+  width: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.ti-android {
+  color: #ff5353;
+  font-size: 20px;
+  text-align: center;
+}
+
+.buttons:hover {
+  .button__google--content {
+    color: white;
+    background-color: #ff5353;
+
+    .ti-android {
+      color: white
+    }
+  }
+
+}
+
+.ti-apple {
+  font-size: 20px;
+  text-align: center;
+}
+
+.button {
+  position: relative;
+
+  &__google--content:hover {
+    transition: 1ms;
+    background-color: #ff5353;
+
+    ._buttonTexts {
+      color: white
+    }
+
+    .ti-android {
+      color: #fff;
+    }
+  }
+}
+
+.button__apple {
+  height: 47px;
+}
+
+.button__apple--content {
+  padding: 8px 8px 10px 8px;
+  color: white;
+  background-color: #ff5353;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.icons-footer {
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+}
+
+.socialmedia {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  margin: 0px 10px 0px 0px;
+  position: relative;
+  color: black;
+}
+
+.ti-facebook {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.socialmedia:hover {
+  background-color: #ff5353;
+  color: white;
+}
+
+.ti-twitter-alt {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.ti-pinterest-alt {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.ti-instagram {
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-applications {
+  padding: 0 0 0 40px;
+}
+
+.copyright {
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  color: #8888;
+  font-size: 15px;
+  background-color: #e9e2d8;
+}
+
+a.red-link {
+  color: #ff5353;
+  text-decoration: none;
+}
